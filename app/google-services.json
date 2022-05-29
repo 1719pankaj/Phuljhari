@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "638210945620",
+    "firebase_url": "https://esp-demo-10faa-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "esp-demo-10faa",
+    "storage_bucket": "esp-demo-10faa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638210945620:android:194e093179b5808fbf73c1",
+        "android_client_info": {
+          "package_name": "com.example.phuljhari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638210945620-uofktc47ojfogni1119mkqjcul9s2780.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTvgkgR_4mg-BDmtg1P48a11vypsP7Tj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638210945620-uofktc47ojfogni1119mkqjcul9s2780.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
