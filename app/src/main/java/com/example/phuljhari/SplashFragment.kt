@@ -1,6 +1,5 @@
 package com.example.phuljhari
 
-import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
@@ -13,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 
 class SplashFragment : Fragment() {
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_splash, container, false)
@@ -24,11 +24,6 @@ class SplashFragment : Fragment() {
         }, 2000)
 
         return view
-    }
-
-    private fun onBoardingFinished(): Boolean {
-        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
-        return sharedPref.getBoolean("Finished", false)
     }
 
 }

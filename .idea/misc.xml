@@ -3,13 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable/button_background.xml" value="0.22" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable/button_focused.xml" value="0.22" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable/button_press.xml" value="0.22" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable/button_unfocused.xml" value="0.22" />
         <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable/dot.xml" value="0.2415" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23" />
         <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable/line.xml" value="0.2415" />
         <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable/progress_ring.xml" value="0.23" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/drawable/rounded_corner.xml" value="0.29" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/font-v26/janna.xml" value="0.39166666666666666" />
         <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/font/janna.xml" value="0.39166666666666666" />
         <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/layout/fragment_main.xml" value="0.5" />
-        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/layout/fragment_splash.xml" value="0.5" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/layout/fragment_about.xml" value="0.29743589743589743" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/layout/fragment_main.xml" value="0.33" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/layout/fragment_splash.xml" value="0.33" />
+        <entry key="..\:/Codez/Android/Phuljhari/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.23" />
       </map>
     </option>
   </component>

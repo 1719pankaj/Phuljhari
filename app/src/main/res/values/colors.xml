@@ -19,5 +19,9 @@
     <color name="less_white">#86888a</color>
     <color name="least_white">#4c4f52</color>
 
+    <color name="accent">#4fa7bd</color>
+    <color name="less_accent">#186578</color>
+    <color name="least_accent">#013d4d</color>
+
 
 </resources>

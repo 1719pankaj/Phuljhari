@@ -1,467 +1,520 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/swiperefresh"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".MainFragment"
-    tools:ignore="MissingClass">
-
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/point1"
-        app:layout_constraintStart_toEndOf="@+id/point1"
-        app:layout_constraintTop_toTopOf="@+id/point1">
-
-
-        <TextView
-            android:id="@+id/bpm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="50%"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/bpm_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/less_white"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bpm"
-            android:text="Pulse ~ 72 bpm" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/point2"
-        app:layout_constraintStart_toEndOf="@+id/point2"
-        app:layout_constraintTop_toTopOf="@+id/point2">
-
-        <TextView
-            android:id="@+id/spo2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="50%"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/spo2_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/less_white"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/spo2"
-            android:text="SpO2 ~ 95-100%" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/point3"
-        app:layout_constraintStart_toEndOf="@+id/point3"
-        app:layout_constraintTop_toTopOf="@+id/point3">
-
-        <TextView
-            android:id="@+id/tCont"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="50%"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tCont_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/less_white"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tCont"
-            android:text="Contact Temp. ~ 37 °C" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-    <ImageView
-        android:id="@+id/point1"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_marginStart="32dp"
-        app:tint="@color/white"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/dot"
-        app:layout_constraintStart_toEndOf="@+id/cpb_bpm"
-        app:layout_constraintTop_toTopOf="@+id/cpb_bpm" />
-
-    <ImageView
-        android:id="@+id/point2"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="65dp"
-        android:src="@drawable/dot"
-        app:layout_constraintStart_toEndOf="@+id/cpb_bpm"
-        app:layout_constraintTop_toBottomOf="@+id/point1"
-        app:tint="@color/less_white" />
-
-    <ImageView
-        android:id="@+id/point3"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="65dp"
-        app:tint="@color/least_white"
-        android:src="@drawable/dot"
-        app:layout_constraintStart_toEndOf="@+id/cpb_bpm"
-        app:layout_constraintTop_toBottomOf="@+id/point2" />
-
-
-    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-        android:id="@+id/cpb_bpm"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        app:cpb_background_progressbar_color="@color/kinda_black"
-        app:cpb_background_progressbar_width="10dp"
-        app:cpb_progress_direction="to_right"
-        app:cpb_progressbar_color="@color/white"
-        app:cpb_progressbar_width="10dp"
-        app:cpb_round_border="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:cpb_progress="60" />
-
-    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-        android:id="@+id/cpb_spo2"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        app:cpb_background_progressbar_color="@color/kinda_black"
-        app:cpb_background_progressbar_width="10dp"
-        app:cpb_progress_direction="to_right"
-        app:cpb_progressbar_color="@color/less_white"
-        app:cpb_progressbar_width="10dp"
-        app:cpb_round_border="true"
-        app:layout_constraintBottom_toBottomOf="@+id/cpb_bpm"
-        app:layout_constraintEnd_toEndOf="@+id/cpb_bpm"
-        app:layout_constraintStart_toStartOf="@+id/cpb_bpm"
-        app:layout_constraintTop_toTopOf="@+id/cpb_bpm"
-        tools:cpb_progress="60" />
-
-    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-        android:id="@+id/cpb_tCont"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:cpb_background_progressbar_color="@color/kinda_black"
-        app:cpb_background_progressbar_width="10dp"
-        app:cpb_progress_direction="to_right"
-        app:cpb_progressbar_color="@color/least_white"
-        app:cpb_progressbar_width="10dp"
-        app:cpb_round_border="true"
-        app:layout_constraintBottom_toBottomOf="@+id/cpb_bpm"
-        app:layout_constraintEnd_toEndOf="@+id/cpb_bpm"
-        app:layout_constraintStart_toStartOf="@+id/cpb_bpm"
-        app:layout_constraintTop_toTopOf="@+id/cpb_bpm"
-        tools:cpb_progress="60" />
-
-
-    <View
-        android:id="@+id/view"
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="44dp"
-        android:background="@color/least_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cpb_bpm" />
-
-
-    <TextView
-        android:id="@+id/head2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="38dp"
-        android:text="Chamber Stats"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
-
-
-
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/humidt_constraint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/head2">
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".MainFragment"
+        tools:ignore="MissingClass">
 
         <TextView
-            android:id="@+id/humidt_label"
+            android:id="@+id/patient_stats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
-            android:text="Humidity"
+            android:layout_marginTop="34dp"
+            android:text="ESSENTIALS"
+            android:fontFamily="@font/janna_lt_bold"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="26sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="203dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/point1"
+            app:layout_constraintStart_toEndOf="@+id/point1"
+            app:layout_constraintTop_toTopOf="@+id/point1">
 
-        <com.mackhartley.roundedprogressbar.RoundedProgressBar
-            android:id="@+id/humidt_progress"
-            android:layout_width="0dp"
-            android:layout_height="10dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="2dp"
-            android:scaleX="-1"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/humidt_label"
-            app:rpbAnimationLength="1000"
-            app:rpbBackgroundColor="@color/kinda_black"
-            app:rpbCornerRadiusBottomRight="20dp"
-            app:rpbCornerRadiusTopRight="20dp"
-            app:rpbProgressColor="@color/least_white"
-            app:rpbShowProgressText="false"
-            tools:rpbProgress="40" />
 
-        <com.mackhartley.roundedprogressbar.RoundedProgressBar
-            android:id="@+id/avg_humidt_progress"
-            android:layout_width="0dp"
-            android:layout_height="10dp"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="24dp"
-            tools:rpbProgress="40"
-            app:rpbBackgroundColor="@color/kinda_black"
-            app:rpbShowProgressText="false"
-            app:rpbAnimationLength="1000"
-            app:rpbCornerRadiusTopRight="20dp"
-            app:rpbCornerRadiusBottomRight="20dp"
-            app:rpbProgressColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/humidt_label" />
+            <TextView
+                android:id="@+id/bpm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50%"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/humidt"
+            <TextView
+                android:id="@+id/bpm_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Pulse ~ 72 bpm"
+                android:textColor="@color/less_white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bpm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            tools:text="70%"
-            android:textSize="12sp"
-            app:layout_constraintTop_toBottomOf="@id/humidt_progress"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <TextView
-            android:id="@+id/humidt_avg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            tools:text="71%"
-            android:textSize="12sp"
-            app:layout_constraintTop_toBottomOf="@id/avg_humidt_progress"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/amb_temp_constraint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/humidt_constraint">
-
-        <TextView
-            android:id="@+id/amb_temp_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
-            android:text="Ambient Tempreature"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="203dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/point2"
+            app:layout_constraintStart_toEndOf="@+id/point2"
+            app:layout_constraintTop_toTopOf="@+id/point2">
 
-        <com.mackhartley.roundedprogressbar.RoundedProgressBar
-            android:id="@+id/amb_temp_progress"
-            android:layout_width="0dp"
-            android:layout_height="10dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="2dp"
-            android:scaleX="-1"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            <TextView
+                android:id="@+id/spo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50%"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/spo2_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="SpO2 ~ 95-100%"
+                android:textColor="@color/less_white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spo2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/point3"
+            app:layout_constraintStart_toEndOf="@+id/point3"
+            app:layout_constraintTop_toTopOf="@+id/point3">
+
+            <TextView
+                android:id="@+id/tCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50%"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tCont_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Contact Temp. ~ 37 °C"
+                android:textColor="@color/less_white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tCont" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/point1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/dot"
+            app:layout_constraintStart_toEndOf="@+id/cpb_bpm"
+            app:layout_constraintTop_toTopOf="@+id/cpb_bpm"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/point2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/dot"
+            app:layout_constraintStart_toEndOf="@+id/cpb_bpm"
+            app:layout_constraintTop_toBottomOf="@+id/point1"
+            app:tint="@color/less_white" />
+
+        <ImageView
+            android:id="@+id/point3"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/dot"
+            app:layout_constraintStart_toEndOf="@+id/cpb_bpm"
+            app:layout_constraintTop_toBottomOf="@+id/point2"
+            app:tint="@color/least_white" />
+
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/cpb_bpm"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="38dp"
+            app:cpb_background_progressbar_color="@color/kinda_black"
+            app:cpb_background_progressbar_width="10dp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="@color/least_accent"
+            app:cpb_progressbar_width="10dp"
+            app:cpb_round_border="true"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/amb_temp_label"
-            app:rpbAnimationLength="1000"
-            app:rpbBackgroundColor="@color/kinda_black"
-            app:rpbCornerRadiusBottomRight="20dp"
-            app:rpbCornerRadiusTopRight="20dp"
-            app:rpbProgressColor="@color/least_white"
-            app:rpbShowProgressText="false"
-            tools:rpbProgress="40" />
+            app:layout_constraintTop_toBottomOf="@id/patient_stats"
+            tools:cpb_progress="60" />
 
-        <com.mackhartley.roundedprogressbar.RoundedProgressBar
-            android:id="@+id/avg_amb_temp_progress"
-            android:layout_width="0dp"
-            android:layout_height="10dp"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="24dp"
-            tools:rpbProgress="40"
-            app:rpbBackgroundColor="@color/kinda_black"
-            app:rpbShowProgressText="false"
-            app:rpbAnimationLength="1000"
-            app:rpbCornerRadiusTopRight="20dp"
-            app:rpbCornerRadiusBottomRight="20dp"
-            app:rpbProgressColor="@color/white"
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/cpb_spo2"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cpb_background_progressbar_color="@color/kinda_black"
+            app:cpb_background_progressbar_width="10dp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="@color/less_accent"
+            app:cpb_progressbar_width="10dp"
+            app:cpb_round_border="true"
+            app:layout_constraintBottom_toBottomOf="@+id/cpb_bpm"
+            app:layout_constraintEnd_toEndOf="@+id/cpb_bpm"
+            app:layout_constraintStart_toStartOf="@+id/cpb_bpm"
+            app:layout_constraintTop_toTopOf="@+id/cpb_bpm"
+            tools:cpb_progress="60" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/cpb_tCont"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cpb_background_progressbar_color="@color/kinda_black"
+            app:cpb_background_progressbar_width="10dp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="@color/accent"
+            app:cpb_progressbar_width="10dp"
+            app:cpb_round_border="true"
+            app:layout_constraintBottom_toBottomOf="@+id/cpb_bpm"
+            app:layout_constraintEnd_toEndOf="@+id/cpb_bpm"
+            app:layout_constraintStart_toStartOf="@+id/cpb_bpm"
+            app:layout_constraintTop_toTopOf="@+id/cpb_bpm"
+            tools:cpb_progress="60" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="44dp"
+            android:background="@color/least_white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/amb_temp_label" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cpb_bpm" />
+
 
         <TextView
-            android:id="@+id/amb_temp"
+            android:id="@+id/head2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="38dp"
+            android:text="CHAMBER REPORT"
+            android:fontFamily="@font/janna_lt_bold"
             android:textColor="@color/white"
-            tools:text="32"
-            android:textSize="12sp"
-            app:layout_constraintTop_toBottomOf="@id/amb_temp_progress"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/humidt_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/head2">
+
+            <TextView
+                android:id="@+id/humidt_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="Humidity"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="203dp" />
+
+            <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                android:id="@+id/humidt_progress"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="2dp"
+                android:scaleX="-1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/humidt_label"
+                app:rpbAnimationLength="1000"
+                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbCornerRadiusBottomRight="20dp"
+                app:rpbCornerRadiusTopRight="20dp"
+                app:rpbProgressColor="@color/least_white"
+                app:rpbShowProgressText="false"
+                tools:rpbProgress="40" />
+
+            <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                android:id="@+id/avg_humidt_progress"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/humidt_label"
+                app:rpbAnimationLength="1000"
+                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbCornerRadiusBottomRight="20dp"
+                app:rpbCornerRadiusTopRight="20dp"
+                app:rpbProgressColor="@color/white"
+                app:rpbShowProgressText="false"
+                tools:rpbProgress="40" />
+
+            <TextView
+                android:id="@+id/humidt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/humidt_progress"
+                tools:text="70%" />
+
+            <TextView
+                android:id="@+id/humidt_avg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:textColor="@color/less_white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/avg_humidt_progress"
+                tools:text="71%" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/amb_temp_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/humidt_constraint">
+
+            <TextView
+                android:id="@+id/amb_temp_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="Ambient Tempreature"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="203dp" />
+
+            <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                android:id="@+id/amb_temp_progress"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="2dp"
+                android:scaleX="-1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/amb_temp_label"
+                app:rpbAnimationLength="1000"
+                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbCornerRadiusBottomRight="20dp"
+                app:rpbCornerRadiusTopRight="20dp"
+                app:rpbProgressColor="@color/least_white"
+                app:rpbShowProgressText="false"
+                tools:rpbProgress="40" />
+
+            <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                android:id="@+id/avg_amb_temp_progress"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/amb_temp_label"
+                app:rpbAnimationLength="1000"
+                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbCornerRadiusBottomRight="20dp"
+                app:rpbCornerRadiusTopRight="20dp"
+                app:rpbProgressColor="@color/white"
+                app:rpbShowProgressText="false"
+                tools:rpbProgress="40" />
+
+            <TextView
+                android:id="@+id/amb_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/amb_temp_progress"
+                tools:text="32" />
+
+            <TextView
+                android:id="@+id/avg_amb_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:textColor="@color/less_white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/avg_amb_temp_progress"
+                tools:text="31.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amb_temp_constraint">
+
+            <TextView
+                android:id="@+id/ht_index_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="Heat Index"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                android:id="@+id/ht_index_progress"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ht_index_label"
+                app:rpbAnimationLength="1000"
+                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbCornerRadius="20dp"
+                app:rpbProgressColor="@color/white"
+                app:rpbShowProgressText="false"
+                tools:rpbProgress="40" />
+
+            <TextView
+                android:id="@+id/ht_index_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ht_index_progress"
+                tools:text="40" />
+
+            <TextView
+                android:id="@+id/ht_index_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:textColor="@color/less_white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ht_index_progress"
+                tools:text="97" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/avg_amb_temp"
+            android:id="@+id/phuljhari_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            tools:text="31.5"
-            android:textSize="12sp"
-            app:layout_constraintTop_toBottomOf="@id/avg_amb_temp_progress"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/less_accent"
+            android:text="PHULJHARI." />
+
+        <TextView
+            android:id="@+id/powered_by_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Powered By "
+            android:textColor="@color/least_white"
+            android:textSize="10sp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintBottom_toTopOf="@id/phuljhari_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab_about"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="24dp"
+            android:text="ABOUT"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amb_temp_constraint">
-
-        <TextView
-            android:id="@+id/ht_index_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="20dp"
-            android:text="Heat Index"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <com.mackhartley.roundedprogressbar.RoundedProgressBar
-            android:id="@+id/ht_index_progress"
-            android:layout_width="0dp"
-            android:layout_height="10dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="24dp"
-            tools:rpbProgress="40"
-            app:rpbBackgroundColor="@color/kinda_black"
-            app:rpbShowProgressText="false"
-            app:rpbAnimationLength="1000"
-            app:rpbCornerRadius="20dp"
-            app:rpbProgressColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ht_index_label" />
-
-        <TextView
-            android:id="@+id/ht_index_c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            tools:text="40"
-            android:textSize="12sp"
-            app:layout_constraintTop_toBottomOf="@id/ht_index_progress"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <TextView
-            android:id="@+id/ht_index_f"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            tools:text="97"
-            android:textSize="12sp"
-            app:layout_constraintTop_toBottomOf="@id/ht_index_progress"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
