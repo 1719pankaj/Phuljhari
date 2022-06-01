@@ -29,20 +29,20 @@ The android app lets you:
 ## Screenshots
 
 [<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/Splash.png" align="left"
-width="180"
+width="400"
     hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/Splash.png)
     
 [<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/Main.png" align="center"
-width="180"
+width="400"
     hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/Main.png)
 
 [<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/About.png" align="center"
-width="180"
+width="400"
     hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/About.png)
     
-<!-- [<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/PhuljhariGif.gif" align="center"
-width="200"
-    hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/PhuljhariGif.gif) -->
+[<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/PhuljhariGif.gif" align="center"
+width="400"
+    hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/PhuljhariGif.gif)
 
 ## Permissions
 
