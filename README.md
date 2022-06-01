@@ -3,25 +3,26 @@
 <img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/ic_launcher.png" align="left"
 width="200" hspace="10" vspace="10">
 
-DankMemes is a meme sharing app.  
-DankMemes is free and open source with absolutely no Ads.  
-Latest build available in releases section
+Phuljhari is a companion applicatioon for out IoT based *Patient Monitoring System*
+Phuljhari is a cloud connected front-end interface
+With Phuljhari you can access all the data outside the institution premises.
 
 ## About
 
-DankMemes is an meme aggregator with that sources Dankest of memes from some of the best subreddits.
+Phuljhari is a part of the *Patient Monitoring System's* cloud side interfaces. All the data instead of being accessed directly from the MCU,
+The stats are updated to Google Fiebase cloud and the Phuljhari interface shows it and also provides visual aids to better process the data.
 
-This application was originally created by Pankaj Kumar Roy and released under the GNU GPLv3.
+This application was originally created and released under the GNU GPLv3.
 
 ## Features
 
 The android app lets you:
-- Scroll infinite memes.
-- Star the best one to be displayed in the community section.
-- Community options handled by firebase.
-- Zoom on items with double-tap.
-- Configuration menu for changing sources.
-- Intuitive Onboarding process.
+- Access live stats from the Database
+- All the data is visualized and easy to assimilate
+- All the code is opensource.
+- Cutting edge features like MVVM and Databinding are implemented
+- All the libaries used are opensource
+- Can operate using very little network throughput
 - Minimal permission required.
 - Can operate withou any user permissions.
 
@@ -41,9 +42,8 @@ width="200"
 
 ## Permissions
 
-On Android versions prior to Android 6.0, DankMemes requires the following permissions:
+On Android versions prior to Android 6.0, Phuljhari requires the following permissions:
 - Full Network Access.
-- Read and write access to external storage.
 
 ## Contributing
 
