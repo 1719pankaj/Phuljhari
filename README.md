@@ -18,6 +18,7 @@ This application was originally created and released under the GNU GPLv3.
 
 The android app lets you:
 - Access live stats from the Database
+- No need for on-premises VPN or port-forwarding 
 - All the data is visualized and easy to assimilate
 - All the code is opensource.
 - Cutting edge features like MVVM and Databinding are implemented
