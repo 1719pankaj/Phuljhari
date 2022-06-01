@@ -40,9 +40,9 @@ width="200"
 width="200"
     hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/About.png)
     
-[<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/PhuljhariGif.gif" align="center"
+<!-- [<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/PhuljhariGif.gif" align="center"
 width="200"
-    hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/PhuljhariGif.gif)
+    hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/PhuljhariGif.gif) -->
 
 ## Permissions
 
