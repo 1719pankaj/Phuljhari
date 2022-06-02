@@ -11,7 +11,7 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
+        android:background="?attr/colorPrimary"
         tools:context=".MainFragment"
         tools:ignore="MissingClass">
 
@@ -23,7 +23,7 @@
             android:layout_marginTop="34dp"
             android:text="ESSENTIALS"
             android:fontFamily="@font/janna_lt_bold"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="26sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="50%"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Pulse ~ 72 bpm"
-                android:textColor="@color/less_white"
+                android:textColor="?attr/colorSecondary"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bpm" />
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text="50%"
                 android:textStyle="bold"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="SpO2 ~ 95-100%"
-                android:textColor="@color/less_white"
+                android:textColor="?attr/colorSecondary"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/spo2" />
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:text="50%"
                 android:textStyle="bold"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Contact Temp. ~ 37 °C"
-                android:textColor="@color/less_white"
+                android:textColor="?attr/colorSecondary"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tCont" />
@@ -141,7 +141,7 @@
             android:src="@drawable/dot"
             app:layout_constraintStart_toEndOf="@+id/cpb_bpm"
             app:layout_constraintTop_toTopOf="@+id/cpb_bpm"
-            app:tint="@color/white" />
+            app:tint="?attr/colorOnPrimary" />
 
         <ImageView
             android:id="@+id/point2"
@@ -152,7 +152,7 @@
             android:src="@drawable/dot"
             app:layout_constraintStart_toEndOf="@+id/cpb_bpm"
             app:layout_constraintTop_toBottomOf="@+id/point1"
-            app:tint="@color/less_white" />
+            app:tint="?attr/colorSecondary" />
 
         <ImageView
             android:id="@+id/point3"
@@ -163,7 +163,7 @@
             android:src="@drawable/dot"
             app:layout_constraintStart_toEndOf="@+id/cpb_bpm"
             app:layout_constraintTop_toBottomOf="@+id/point2"
-            app:tint="@color/least_white" />
+            app:tint="?attr/colorSecondaryVariant" />
 
 
         <com.mikhaellopez.circularprogressbar.CircularProgressBar
@@ -172,10 +172,10 @@
             android:layout_height="180dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="38dp"
-            app:cpb_background_progressbar_color="@color/kinda_black"
+            app:cpb_background_progressbar_color="?attr/colorPrimaryVariant"
             app:cpb_background_progressbar_width="10dp"
             app:cpb_progress_direction="to_right"
-            app:cpb_progressbar_color="@color/least_accent"
+            app:cpb_progressbar_color="@color/least_accent_night"
             app:cpb_progressbar_width="10dp"
             app:cpb_round_border="true"
             app:layout_constraintStart_toStartOf="parent"
@@ -186,10 +186,10 @@
             android:id="@+id/cpb_spo2"
             android:layout_width="140dp"
             android:layout_height="140dp"
-            app:cpb_background_progressbar_color="@color/kinda_black"
+            app:cpb_background_progressbar_color="?attr/colorPrimaryVariant"
             app:cpb_background_progressbar_width="10dp"
             app:cpb_progress_direction="to_right"
-            app:cpb_progressbar_color="@color/less_accent"
+            app:cpb_progressbar_color="@color/less_accent_night"
             app:cpb_progressbar_width="10dp"
             app:cpb_round_border="true"
             app:layout_constraintBottom_toBottomOf="@+id/cpb_bpm"
@@ -202,10 +202,10 @@
             android:id="@+id/cpb_tCont"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:cpb_background_progressbar_color="@color/kinda_black"
+            app:cpb_background_progressbar_color="?attr/colorPrimaryVariant"
             app:cpb_background_progressbar_width="10dp"
             app:cpb_progress_direction="to_right"
-            app:cpb_progressbar_color="@color/accent"
+            app:cpb_progressbar_color="@color/accent_night"
             app:cpb_progressbar_width="10dp"
             app:cpb_round_border="true"
             app:layout_constraintBottom_toBottomOf="@+id/cpb_bpm"
@@ -234,7 +234,7 @@
             android:layout_marginTop="38dp"
             android:text="CHAMBER REPORT"
             android:fontFamily="@font/janna_lt_bold"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="22sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -254,7 +254,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
                 android:text="Humidity"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -278,10 +278,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/humidt_label"
                 app:rpbAnimationLength="1000"
-                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbBackgroundColor="?attr/colorPrimaryVariant"
                 app:rpbCornerRadiusBottomRight="20dp"
                 app:rpbCornerRadiusTopRight="20dp"
-                app:rpbProgressColor="@color/least_white"
+                app:rpbProgressColor="?attr/colorSecondaryVariant"
                 app:rpbShowProgressText="false"
                 tools:rpbProgress="40" />
 
@@ -296,10 +296,10 @@
                 app:layout_constraintStart_toStartOf="@id/guideline2"
                 app:layout_constraintTop_toBottomOf="@+id/humidt_label"
                 app:rpbAnimationLength="1000"
-                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbBackgroundColor="?attr/colorPrimaryVariant"
                 app:rpbCornerRadiusBottomRight="20dp"
                 app:rpbCornerRadiusTopRight="20dp"
-                app:rpbProgressColor="@color/white"
+                app:rpbProgressColor="?attr/colorOnPrimary"
                 app:rpbShowProgressText="false"
                 tools:rpbProgress="40" />
 
@@ -309,7 +309,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/humidt_progress"
@@ -321,7 +321,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="24dp"
-                android:textColor="@color/less_white"
+                android:textColor="?attr/colorSecondary"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/avg_humidt_progress"
@@ -344,7 +344,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
                 android:text="Ambient Tempreature"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -368,10 +368,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/amb_temp_label"
                 app:rpbAnimationLength="1000"
-                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbBackgroundColor="?attr/colorPrimaryVariant"
                 app:rpbCornerRadiusBottomRight="20dp"
                 app:rpbCornerRadiusTopRight="20dp"
-                app:rpbProgressColor="@color/least_white"
+                app:rpbProgressColor="?attr/colorSecondaryVariant"
                 app:rpbShowProgressText="false"
                 tools:rpbProgress="40" />
 
@@ -386,10 +386,10 @@
                 app:layout_constraintStart_toStartOf="@id/guideline3"
                 app:layout_constraintTop_toBottomOf="@+id/amb_temp_label"
                 app:rpbAnimationLength="1000"
-                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbBackgroundColor="?attr/colorPrimaryVariant"
                 app:rpbCornerRadiusBottomRight="20dp"
                 app:rpbCornerRadiusTopRight="20dp"
-                app:rpbProgressColor="@color/white"
+                app:rpbProgressColor="?attr/colorOnPrimary"
                 app:rpbShowProgressText="false"
                 tools:rpbProgress="40" />
 
@@ -399,7 +399,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/amb_temp_progress"
@@ -411,7 +411,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="24dp"
-                android:textColor="@color/less_white"
+                android:textColor="?attr/colorSecondary"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/avg_amb_temp_progress"
@@ -433,7 +433,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
                 android:text="Heat Index"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -450,9 +450,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ht_index_label"
                 app:rpbAnimationLength="1000"
-                app:rpbBackgroundColor="@color/kinda_black"
+                app:rpbBackgroundColor="?attr/colorPrimaryVariant"
                 app:rpbCornerRadius="20dp"
-                app:rpbProgressColor="@color/white"
+                app:rpbProgressColor="?attr/colorOnPrimary"
                 app:rpbShowProgressText="false"
                 tools:rpbProgress="40" />
 
@@ -462,7 +462,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ht_index_progress"
@@ -474,7 +474,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="24dp"
-                android:textColor="@color/less_white"
+                android:textColor="?attr/colorSecondary"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ht_index_progress"
@@ -490,7 +490,7 @@
             android:layout_marginStart="6dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textColor="@color/less_accent"
+            android:textColor="@color/less_accent_night"
             android:text="PHULJHARI." />
 
         <TextView
@@ -498,7 +498,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Powered By "
-            android:textColor="@color/least_white"
+            android:textColor="?attr/colorSecondaryVariant"
             android:textSize="10sp"
             android:layout_marginStart="6dp"
             app:layout_constraintBottom_toTopOf="@id/phuljhari_label"

@@ -2,19 +2,21 @@
     <!-- Base application theme. -->
     <style name="Theme.Phuljhari" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryVariant">@color/black</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/kinda_white</item>
+        <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/least_white</item>
-        <item name="colorSecondaryVariant">@color/kinda_black</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/less_white</item>
+        <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
 
-        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/janna_lt_regular</item>
+
+
 
     </style>
 

@@ -13,15 +13,20 @@
     <color name="really_dark">#35225E</color>
     <color name="neon_teal">#00FFE6</color>
     <color name="darker_teal">#00D1B2</color>
+
+
     <color name="black">#22272c</color>
     <color name="kinda_black">#373c40</color>
     <color name="white">#fcfbf8</color>
+    <color name="kinda_white">#d4d3cf</color>
     <color name="less_white">#86888a</color>
     <color name="least_white">#4c4f52</color>
 
-    <color name="accent">#4fa7bd</color>
-    <color name="less_accent">#186578</color>
-    <color name="least_accent">#013d4d</color>
+
+    <color name="accent_night">#4fa7bd</color>
+    <color name="less_accent_night">#186578</color>
+    <color name="least_accent_night">#013d4d</color>
+
 
 
 </resources>
