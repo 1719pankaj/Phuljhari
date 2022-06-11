@@ -5,7 +5,7 @@ width="200" hspace="10" vspace="10">
 
 Phuljhari is a companion application for out IoT based [*Patient Monitoring System*](https://github.com/1719pankaj/CHMKchallo)
 
-Phuljhari is a cloud connected front-end interface
+Phuljhari is a cloud connected front-end interface.
 With Phuljhari you can access all the data outside the institution premises.
 
 ## About
