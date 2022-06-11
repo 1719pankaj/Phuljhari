@@ -1,21 +1,22 @@
 package com.example.phuljhari
 
 import android.annotation.SuppressLint
+import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import android.widget.Toast
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
+import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
-import kotlin.math.log
 import kotlin.math.roundToInt
 
 
@@ -34,12 +35,13 @@ class MainFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
 //        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        setTint(view)
 
         database = FirebaseDatabase.getInstance().reference
 
         var map: Map<*, *>? = null
 
-        val myListenr = database.child("test").addValueEventListener(object : ValueEventListener {
+        val myListener = database.child("test").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 map = dataSnapshot.value as Map<*, *>?
                 updateUi(map, view)
@@ -52,6 +54,7 @@ class MainFragment : Fragment() {
 
         view.swiperefresh.setOnRefreshListener {
             updateUi(map, view)
+            setTint(view)
             Handler().postDelayed({ swiperefresh.isRefreshing = false }, 600)
         }
 
@@ -66,7 +69,7 @@ class MainFragment : Fragment() {
             //And it gets added again when we navigate back to the main fragment.
             //Yes this is painful, yes I want to kill myself.
             //Good bye.
-            database.child("test").removeEventListener(myListenr)
+            database.child("test").removeEventListener(myListener)
 
             findNavController().navigate(R.id.action_mainFragment_to_aboutFragment)
         }
@@ -74,7 +77,44 @@ class MainFragment : Fragment() {
         return view
     }
 
+    //Get the color from the theme
+    @ColorInt
+    private fun getThemeColor(@AttrRes attrColor: Int): Int {
+        val typedValue = TypedValue()
+        val a = requireActivity().theme
+        a.resolveAttribute(attrColor, typedValue, true)
+        return typedValue.data
+    }
 
+
+    fun setTint(view: View): Boolean {
+
+        view.humidt_progress.setProgressDrawableColor(getThemeColor(com.google.android.material.R.attr.colorSecondaryVariant))
+        view.humidt_progress.setBackgroundDrawableColor(getThemeColor(com.google.android.material.R.attr.colorPrimaryVariant))
+
+        view.amb_temp_progress.setProgressDrawableColor(getThemeColor(com.google.android.material.R.attr.colorSecondaryVariant))
+        view.amb_temp_progress.setBackgroundDrawableColor(getThemeColor(com.google.android.material.R.attr.colorPrimaryVariant))
+
+        view.avg_humidt_progress.setProgressDrawableColor(getThemeColor(com.google.android.material.R.attr.colorOnPrimary))
+        view.avg_humidt_progress.setBackgroundDrawableColor(getThemeColor(com.google.android.material.R.attr.colorPrimaryVariant))
+
+        view.avg_amb_temp_progress.setProgressDrawableColor(getThemeColor(com.google.android.material.R.attr.colorOnPrimary))
+        view.avg_amb_temp_progress.setBackgroundDrawableColor(getThemeColor(com.google.android.material.R.attr.colorPrimaryVariant))
+
+        view.ht_index_progress.setProgressDrawableColor(getThemeColor(com.google.android.material.R.attr.colorOnPrimary))
+        view.ht_index_progress.setBackgroundDrawableColor(getThemeColor(com.google.android.material.R.attr.colorPrimaryVariant))
+
+//        view.cpb_bpm.progressBarColor = getThemeColor(com.google.android.material.R.attr.colorPrimaryVariant)
+//        view.cpb_bpm.backgroundProgressBarColor = R.color.least_accent_night
+//
+//        view.cpb_bpm.progressBarColor = getThemeColor(com.google.android.material.R.attr.colorPrimaryVariant)
+//        view.cpb_bpm.backgroundProgressBarColor = R.color.less_accent_night
+//
+//        view.cpb_bpm.progressBarColor = getThemeColor(com.google.android.material.R.attr.colorPrimaryVariant)
+//        view.cpb_bpm.backgroundProgressBarColor = R.color.accent_night
+
+        return true
+    }
 
     @SuppressLint("SetTextI18n")
     fun updateUi(map: Map<*, *>?, view: View) {
@@ -125,7 +165,7 @@ class MainFragment : Fragment() {
 
         val heatIndex = map?.get("HT_INDEX_C").toString().toDouble()
         ht_index_c.text = "$heatIndex°C"
-        view.ht_index_progress.setProgressPercentage((heatIndex * 100) / 50, true)
+        view.ht_index_progress.setProgressPercentage((heatIndex * 100) / 60, true)
         ht_index_f.text = map?.get("HT_INDEX_F").toString() + " F"
 
     }

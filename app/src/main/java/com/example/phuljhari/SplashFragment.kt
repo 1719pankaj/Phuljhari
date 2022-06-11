@@ -17,8 +17,6 @@ class SplashFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_splash, container, false)
 
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
-
         Handler().postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
         }, 2000)
