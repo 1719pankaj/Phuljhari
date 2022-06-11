@@ -38,9 +38,9 @@ width="300"
 width="300"
     hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/Main.png)
 
-[<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/About.png" align="center"
+<!-- [<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/About.png" align="center"
 width="300"
-    hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/About.png)
+    hspace="10" vspace="10">](https://github.com/1719pankaj/Phuljhari/blob/main/Assets/About.png) -->
     
 [<img src="https://github.com/1719pankaj/Phuljhari/blob/main/Assets/PhuljhariGif.gif" align="center"
 width="300"
