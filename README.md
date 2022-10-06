@@ -22,7 +22,6 @@ The android app lets you:
 - No need for on-premises VPN or port-forwarding 
 - All the data is visualized and easy to assimilate
 - All the code is opensource.
-- Cutting edge features like MVVM and Databinding are implemented
 - All the libaries used are opensource
 - Can operate using very little network throughput
 - Minimal permission required.
@@ -50,6 +49,7 @@ width="300"
 
 On Android versions prior to Android 6.0, Phuljhari requires the following permissions:
 - Full Network Access.
+- Online MCU
 
 ## Contributing
 
