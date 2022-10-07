@@ -6,12 +6,12 @@ width="200" hspace="10" vspace="10">
 Phuljhari is a companion application for out IoT based [*Patient Monitoring System*](https://github.com/1719pankaj/CHMKchallo)
 
 Phuljhari is a cloud connected front-end interface.
-With Phuljhari you can access all the data outside the institution premises.
+With Phuljhari you can access all the data remotely from anywhere.
 
 ## About
 
-Phuljhari is a part of the *Patient Monitoring System's* cloud side interfaces. All the data instead of being accessed directly from the MCU,
-The stats are updated to Google Fiebase cloud and the Phuljhari interface shows it and also provides visual aids to better process the data.
+Phuljhari is a part of the *Patient's Health Monitoring System's* cloud side interfaces. All the data instead of being accessed directly from the MCU,
+the stats are updated to Google Fiebase cloud and the Phuljhari interface is used to showcase the data and also provides visual aids for better processing of the data.
 
 This application was originally created and released under the GNU GPLv3.
 
@@ -25,7 +25,7 @@ The android app lets you:
 - All the libaries used are opensource
 - Can operate using very little network throughput
 - Minimal permission required.
-- Can operate withou any user permissions.
+- Can operate without any user permissions.
 
 ## Screenshots
 
